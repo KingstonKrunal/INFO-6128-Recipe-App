@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Locator</title>
+    <title>INFO6128 - Final Project</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta name="theme-color" content="#000"/>
@@ -18,35 +18,102 @@
 
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.min.css">
     <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
-    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
-
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
-    <!-- CSS -->
-    <link
-            rel="stylesheet"
-            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-            crossorigin=""
-    />
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css"/>
 </head>
 
 <body>
-<div id="map"></div>
+<ons-navigator swipeable id="navigator" page="index"></ons-navigator>
 
-<div id="buttonsDiv">
-    <ons-button id="myLocation">My Location</ons-button> <br>
-    <ons-button id="clearAllMarkers">Remove All Markers</ons-button>
-</div>
+<template id="index">
+    <ons-page id="index">
+        <ons-toolbar>
+            <div class="center">My Pokedox</div>
+        </ons-toolbar>
+
+        <ons-list id="pokeList">
+            <ons-list-header>POKEMON (FIRST 100)</ons-list-header>
+            <!--            <ons-lazy-repeat id="pokemonList" style="text-transform: capitalize"></ons-lazy-repeat>-->
+        </ons-list>
+    </ons-page>
+</template>
+
+<template id="pokeData">
+    <ons-page id="pokeData">
+        <ons-toolbar>
+            <div class="left">
+                <ons-back-button>Back</ons-back-button>
+            </div>
+            <div class="center" id="pokeDataTitle" style="text-transform: capitalize"></div>
+        </ons-toolbar>
+
+        <ons-card>
+            <div class="loader" id="loader"></div>
+
+            <div id="imageDiv">
+                <img id="pokeImage">
+            </div>
+
+            <div class="title card__title" id="name" style="text-transform: capitalize"></div>
+
+            <div class="content card--material" id="data" hidden>
+                <ons-list>
+                    <ons-list-header>Types</ons-list-header>
+                    <p id="type1"></p>
+                    <p id="type2"></p>
+                    <p id="type3"></p>
+                    <p id="type4"></p>
+
+                    <br>
+
+                    <ons-list-header>Stats</ons-list-header>
+
+                    <br>
+
+                    <div class="statsDisplay">
+                        <p>HP</p>
+                        <p id="effort1" class="effort"></p>
+                        <p id="baseStat1" class="base"></p>
+                    </div>
+
+                    <div class="statsDisplay">
+                        <p>Attack</p>
+                        <p id="effort2" class="effort"></p>
+                        <p id="baseStat2" class="base"></p>
+                    </div>
+
+                    <div class="statsDisplay">
+                        <p>Defence</p>
+                        <p id="effort3" class="effort"></p>
+                        <p id="baseStat3" class="base"></p>
+                    </div>
+
+                    <div class="statsDisplay">
+                        <p>Special Attack</p>
+                        <p id="effort4" class="effort"></p>
+                        <p id="baseStat4" class="base"></p>
+                    </div>
+
+                    <div class="statsDisplay">
+                        <p>Special Defence</p>
+                        <p id="effort5" class="effort"></p>
+                        <p id="baseStat5" class="base"></p>
+                    </div>
+
+                    <div class="statsDisplay">
+                        <p>Speed</p>
+                        <p id="effort6" class="effort"></p>
+                        <p id="baseStat6" class="base"></p>
+                    </div>
+                </ons-list>
+            </div>
+        </ons-card>
+    </ons-page>
+    </ons-page>
+</template>
 </body>
 
-<script
-        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""
-></script>
-
 <script src="src/app.js"></script>
+<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
 
 <script type="text/javascript">
     const registerSW = async () => {
