@@ -52,20 +52,23 @@ ons-search-input {
     width: 100%;
 }
 
-#pokeImage {
-    margin: 20px;
+.textInput {
+    width: 100%;
+    text-align: center;
+    display: inline;
+    justify-content: center;
 }
 
-.statsDisplay {
-    display: flex;
+.ingredientsDisplay {
+    display: inline-flex;
     justify-content: flex-start;
 }
 
-.effort {
-    background-color: rgb(228, 63, 63);
-    border-radius: 100px;
+.measure {
+    /*background-color: rgb(228, 63, 63);*/
+    /*border-radius: 100px;*/
     padding: 2px;
-    color: white;
+    /*color: white;*/
 }
 
 .base {

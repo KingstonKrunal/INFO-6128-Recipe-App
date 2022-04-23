@@ -1,5 +1,5 @@
-const version = 1.2;
-const cacheName = `MyCacheName ${version}`;
+const version = 1.0;
+const cacheName = `RecipeApp ${version}`;
 const filesToCache = ["offline.html", "assets/images/icon.png", "assets/images/offline.svg", "src/app.js", "src/app.css"];
 
 self.addEventListener("install", (event) => {

@@ -1,7 +1,7 @@
 {
   "name": "Recipe-App",
   "short_name": "Recipes",
-  "start_url": "https://dev.localhost/",
+  "start_url": "https://dev.localhost:3001",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
