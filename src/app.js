@@ -250,6 +250,7 @@ function loadMain() {
             if (e.target.id === 'recipeData') {
 
                 const requestWakeLock = async () => {
+                    let wakeLock;
                     try {
                         wakeLock = await navigator.wakeLock.request();
                         wakeLock.addEventListener(' release', () => {
